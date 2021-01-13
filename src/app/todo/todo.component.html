@@ -6,7 +6,7 @@
         <input type="text" name="filter" id= "filter" [(ngModel)]="filter" placeholder="Filter your to-dos" /> 
         <ol>
             <li *ngFor="let todo of getFilteredResults()">
-                <span *ngIf="!todo.completed"><button id = "complete" (click)="strikethrough(todo)">COMPLETE</button></span>
+                <span *ngIf="!todo.completed"><button id = "complete" (click)="completeTask(todo)">COMPLETE</button></span>
                 <span [ngStyle] ="{'text-decoration': todo.completed ? 'line-through': 'none'}">{{todo.task}}</span>
                 <button id="x" (click) = "removeTask(todo.task)">x</button>
         </ol>
