@@ -41,8 +41,8 @@ public newTask: string = "";
   // Submitting the form calls a function named addTask that adds a new todo to the array
   // with the complete property set to false.
   addTask = function (newTask): void{
-    if (this.newTask.trim()!=''){
-      let newTodo: Todo = {task: this.newTask,completed:false};
+    if (this.newTask !=''){
+      let newTodo: Todo = {task: this.newTask ,completed:false};
       this.todos.push(newTodo);
     }
   }
